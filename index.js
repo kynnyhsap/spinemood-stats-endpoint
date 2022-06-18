@@ -34,7 +34,7 @@ app.get('/', () => {
 
 const start = async () => {
     try {
-        await app.listen(3333)
+        await app.listen(process.env.PORT || 3333, process.env.HOST || '0.0.0.0')
     } catch (err) {
         app.log.error(err)
         process.exit(1)
