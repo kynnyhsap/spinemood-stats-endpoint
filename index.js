@@ -26,6 +26,11 @@ app.post('/', async (request, reply) => {
     return chart.getUrl()
 })
 
+app.get('/', () => {
+    return 'ok'
+})
+
+
 
 const start = async () => {
     try {
